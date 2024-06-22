@@ -1,0 +1,134 @@
+@import "../../../public/styles/config.scss";
+
+.navbar {
+  .navbarLists {
+    display: flex;
+    gap: 4.8rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.3s linear;
+      &:global(.active) {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 999;
+        transform-origin: right;
+        transition: all 0.3s linear;
+      }
+    }
+
+    .navbarLink {
+      &:link,
+      &:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $black;
+        transition: color 0.3s linear;
+				position: relative;
+      }
+			
+      &:active {
+        color: $helper;
+      }
+
+			&::after{
+				content: "";
+				height: 2px;
+				width: 100%;
+				position: absolute;
+				background-color: $helper;
+				bottom: -5px;
+				left: 0;
+				scale: 0;
+				transform-origin: center;
+				transition: all 0.4s ease-in-out;
+			}
+			&:hover{
+				color: $helper;
+				&::after{
+					scale: 1;
+				}
+			}
+    }
+  }
+
+  .mobileNavbarBtn {
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: $black;
+
+    @media (max-width: 768px) {
+      display: inline-block;
+      z-index: 9999;
+
+      .mobileNavIcon {
+        font-size: 4.2rem;
+        color: $black;
+      }
+      .mobileNavIcon[name="close-outline"] {
+        display: none;
+      }
+      .closeOutline {
+        display: none;
+      }
+      &:global(.active) {
+        :global(.closeOutline) {
+          display: inline-block;
+          position: absolute;
+          z-index: 9999;
+          top: 30%;
+          right: 10%;
+        }
+      }
+    }
+  }
+
+  .cartTrolleyLink {
+		position: relative;
+		&::after{
+			display: none;
+		}
+    .cartTotalItem {
+      width: 2.4rem;
+      height: 2.4rem;
+      position: absolute;
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -20%;
+      left: 70%;
+      background-color: #8490ff;
+      font-size: 14px;
+			line-height: 0;
+    }
+  }
+}
+
+.user-login--name {
+  text-transform: capitalize;
+}
+.user-logout,
+.user-login {
+  font-size: 2rem;
+  padding: 0.8rem 1.4rem;
+}

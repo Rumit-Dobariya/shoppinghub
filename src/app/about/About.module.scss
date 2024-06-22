@@ -1,0 +1,8 @@
+@import "../../../public/styles/config.scss";
+
+.pageMain {
+  height: calc(100vh - 100px);
+  overflow: auto;
+  background-color: $backGround;
+  color: $textCommon;
+}

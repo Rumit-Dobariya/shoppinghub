@@ -1,0 +1,36 @@
+@import "../../../public/styles/config.scss";
+
+.contactMain {
+	height: calc(100vh - 100px);
+  overflow: auto;
+  padding: 9rem 0 5rem 0;
+  text-align: center;
+
+  .container {
+    margin-top: 6rem;
+
+    .contactForm {
+      max-width: 50rem;
+      margin: auto;
+
+      .contactInputs {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        input[type="submit"] {
+          cursor: pointer;
+          transition: all 0.2s;
+					margin-top: 0;
+
+          &:hover {
+            background-color: $white;
+            border: 1px solid $btn;
+            color: $btn;
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+}

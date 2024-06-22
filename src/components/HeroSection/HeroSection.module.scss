@@ -1,0 +1,64 @@
+.heroMainOuter {
+  padding: 10rem 0;
+
+  .heroSectionData {
+    p {
+      margin: 2rem 0;
+    }
+    h1 {
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+    .introData {
+      margin-bottom: 0;
+    }
+  }
+
+  .heroSectionImage {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    figure {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0;
+      &::after {
+        content: "";
+        width: 60%;
+        height: 96%;
+        position: absolute;
+        left: 49%;
+        top: -5rem;
+        background-color: rgba(81, 56, 238, 0.4);
+        z-index: -1;
+      }
+    }
+    :global(.imgStyle) {
+      min-width: 100%;
+      height: auto;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+	@media (max-width: 768px) {
+		.grid{
+			gap: 10rem;
+		}
+
+		figure{
+			&::after{
+				content: "";
+				width: 50%;
+				height: 100%;
+				top: 0;
+				left: 10%;
+				background-color: rgba(81, 56, 238, 0.4);
+			}
+		}
+	}
+}

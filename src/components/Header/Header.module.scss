@@ -1,0 +1,20 @@
+@import "../../../public/styles/config.scss";
+
+.pageMain {
+  padding: 0 4.8rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  box-shadow: $shadowSupport;
+  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+
+  .logo {
+    height: 5rem;
+    margin-top: 5px;
+  }
+}
