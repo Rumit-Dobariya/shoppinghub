@@ -1,0 +1,24 @@
+/* we can use it as a global one too  */
+@import "../../../public/styles/config.scss";
+
+.amountToggle {
+    // margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4rem;
+  
+    button {
+      border: none;
+      background-color: #fff;
+      cursor: pointer;
+    }
+  
+    .amountStyle {
+      font-size: 2.4rem;
+      color: $btn;
+      width: 50px;
+      text-align: center;
+    }
+  }

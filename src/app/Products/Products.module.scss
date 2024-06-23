@@ -1,0 +1,14 @@
+@import "../../../public//styles/config.scss";
+
+.pageMain {
+    margin-top: 100px;
+  :global(.gridFilterColumn) {
+    grid-template-columns: 0.2fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    :global(.gridFilterColumn) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

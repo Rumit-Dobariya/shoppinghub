@@ -23,9 +23,12 @@ const AppProvider = ({ children }) => {
 		dispatch({type : "SET_LOADING"})
 		try {
 			const responce = await axios.get(url);
-			console.log(responce, "responce")
 			const products = await responce.data;
 			dispatch({type : "SET_API_DATA", payload : products})
+
+
+			console.log(products, "products2121")
+
 		} catch (error) {
 			dispatch({type : "API_ERROR"})
 		}
@@ -42,6 +45,8 @@ const AppProvider = ({ children }) => {
 		}
 
 	} 
+
+	// console.log(products, "")
 
   useEffect(() =>{
 		getApiData(API);

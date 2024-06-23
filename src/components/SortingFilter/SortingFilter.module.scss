@@ -1,0 +1,44 @@
+@import "../../../public/styles/config.scss";
+
+.sortingMainWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+
+  .sortingListGrid {
+    display: flex;
+    gap: 2rem;
+
+    .sortBtn {
+      padding: 0.8rem 1rem;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:global(.active) {
+        background-color: $black;
+        color: #fff;
+      }
+    }
+
+    :global(.icon) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .sortSelection {
+    .sortSelectionStyle {
+      padding: 0.5rem;
+      cursor: pointer;
+
+      .sort-select--option {
+        padding: 0.5rem 0;
+        cursor: pointer;
+        height: 2rem;
+        padding: 10px;
+      }
+    }
+  }
+}

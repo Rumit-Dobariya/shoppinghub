@@ -1,10 +1,4 @@
 const ProductReducer = (state, action) => {
-  // if(action.type === "IS_LOADING"){
-  //     return{
-  //         ...state,
-  //         isLoading : true
-  //     }
-  // }
 
   switch (action.type) {
     case "IS_LOADING":

@@ -13,24 +13,27 @@ import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 import "../../public/styles/global.scss";
 import Footer from "@/components/Footer/Footer";
 import { AppProvider } from "@/context/ProductContext";
+import { FilterContextProvider } from "@/context/FilterContext";
 
 export default function Home() {
   return (
     // <ThemeProvider theme={theme}>
-    <AppProvider >
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/single/:id" element={<Single />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-        <Footer />
-      </Router>
-      </AppProvider>
+    <AppProvider>
+      <FilterContextProvider>
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route path="/single/:id" element={<Single />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </FilterContextProvider>
+    </AppProvider>
   );
 }

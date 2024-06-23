@@ -5,11 +5,11 @@ import Product from "../Product/Product";
 export default function FeatureProducts() {
   const { isLoading, featuresProducts } = useProductContext();
 
-  if (isLoading) {
-    return <span>...Loading</span>;
-  }
+//   if (isLoading) {
+//     return <span>...Loading</span>;
+//   }
 
-  console.log(featuresProducts, "featuresData");
+  console.log(featuresProducts, "featuresProducts")
 
   return (
 		<div className={Styles.sectionMain}>

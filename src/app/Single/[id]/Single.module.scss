@@ -8,16 +8,17 @@
   color: $textCommon;
 
   .container {
-    padding: 9rem 0;
+    width: 100%;
+    padding: 4rem 12rem;
   }
-  .product-data {
+  .productData {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 2rem;
 
-    .product-data-warranty {
+    .productDataWarranty {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -25,10 +26,10 @@
       border-bottom: 1px solid #ccc;
       margin-bottom: 1rem;
 
-      .product-warranty-data {
+      .productWarrantyData {
         text-align: center;
 
-        .warranty-icon {
+        .warrantyIcon {
           background-color: rgba(220, 220, 220, 0.5);
           border-radius: 50%;
           width: 4rem;
@@ -42,13 +43,13 @@
       }
     }
 
-    .product-data-price {
+    .productDataPrice {
       font-weight: bold;
     }
-    .product-data-real-price {
+    .productDataRealPrice {
       color: $btn;
     }
-    .product-data-info {
+    .productDataInfo {
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -68,7 +69,7 @@
     }
   }
 
-  .product-images {
+  .productImages {
     display: flex;
     justify-content: center;
     align-items: center;
